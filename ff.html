@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#search {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.lesson {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Фиксированное меню */
+.navcont {
+    position: fixed; /* Меню фиксируется */
+    top: 0; /* Меню сверху */
+    left: 0; /* Меню слева */
+    width: 100%; /* Ширина на всю страницу */
+    background-color: #333; /* Цвет фона */
+    z-index: 1000; /* Поверх всего контента */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+/* Стили для списка навигации */
+.nav-links {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем элементы горизонтально */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+}
+
+/* Стили для элементов меню */
+.nav-links li {
+    margin-right: 20px; /* Расстояние между пунктами меню */
+}
+
+.nav-links a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+    font-size: 18px; /* Размер шрифта */
+    padding: 10px 15px; /* Отступы внутри ссылки */
+    border-radius: 5px; /* Скругленные углы */
+    transition: 0.3s; /* Плавное изменение при наведении */
+}
+
+/* Эффект при наведении */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Цвет фона при наведении */
+    color: #ffcc00; /* Цвет текста при наведении */
+}
+
+/* Контент страницы */
+.content {
+    margin-top: 60px; /* Отступ сверху, чтобы контент не перекрывал меню */
+    padding: 20px;
+    height: 2000px; /* Для демонстрации прокрутки */
+}
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фиксированное меню</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение стилей -->
+</head>
+<body>
+
+    <!-- Навигационное меню -->
+    <nav class="navcont">
+        <ul class="nav-links">
+            <li><a href="#index.html">Главная</a></li>
+            <li><a href="#articles.html">Видео Уроки</a></li>
+            <li><a href="#dd.html">Фильмы</a></li>
+            <li><a href="#about.html">О сайте</a></li>
+        </ul>
+    </nav>
+    <div class="lesson" data-title="Образ Онегина в романе Пушкина">
+        <h2>Образ Онегина в романе Пушкина</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yz6wW3ap-k4" frameborder="0" allowfullscreen></iframe>
+        <p>Описание героя, его характер...</p>
+    </div>
+    <!-- Контент страницы -->
+    <div class="content">
+        <h1>Добро пожаловать!</h1>
+        <p>Здесь будет ваш контент. Прокрутите страницу, чтобы увидеть, как меню остается наверху.</p>
+    </div>
+
+</body>
+</html>
+

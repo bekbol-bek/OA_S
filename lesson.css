@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/Любовь\ Цитата\ Рабочий\ стол\ Обои.png') no-repeat center center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;  /* Растянуть фон */
+    background-position: center;  /* Центрировать */
+    background-repeat: no-repeat;  /* Не повторять */
+    background-attachment: fixed; /* Фон остается на месте */
+
+    height: 15vh;
+    border-radius: 5px;
+    
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#search {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.lesson {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Фиксированное меню */
+.navcont {
+    position: fixed; /* Меню фиксируется */
+    top: 0; /* Меню сверху */
+    left: 0; /* Меню слева */
+    width: 100%; /* Ширина на всю страницу */
+    background: rgba(0, 0, 0, 0.674); /* Тёмный фон с прозрачностью */
+    z-index: 1000; /* Поверх всего контента */
+    padding: 25px 0; /* Отступы сверху и снизу */
+    border-radius: 15px;
+}
+
+/* Стили для списка навигации */
+.nav-links {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем элементы горизонтально */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+}
+
+/* Стили для элементов меню */
+.nav-links li {
+    margin-right: 20px; /* Расстояние между пунктами меню */
+}
+
+.nav-links a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+    font-size: 18px; /* Размер шрифта */
+    padding: 10px 15px; /* Отступы внутри ссылки */
+    border-radius: 5px; /* Скругленные углы */
+    transition: 0.3s; /* Плавное изменение при наведении */
+}
+
+/* Эффект при наведении */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Цвет фона при наведении */
+    color: #ffcc00; /* Цвет текста при наведении */
+}
+
+/* Контент страницы */
+#lessons {
+    margin-top: 80px; /* Отступ сверху, чтобы меню не перекрывало контент */
+    padding: 20px;
+    height: 2000px; /* Для демонстрации прокрутки */
+}
+/* Мобильная версия */
+@media (max-width: 768px) {
+    /* Меню */
+    .nav-links {
+        flex-direction: column; /* Вертикальное расположение меню */
+        gap: 15px;
+        align-items: center;
+    }
+
+    .nav-links li {
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+    }
+
+    /* Логотип и элементы меню */
+    .logo {
+        font-size: 30px; /* Уменьшаем размер логотипа */
+    }
+
+    /* Поэзия и уроки */
+    .lesson {
+        width: 80%; /* Увеличиваем ширину элементов на мобильных */
+        padding: 15px;
+    }
+
+    #search {
+        width: 70%; /* Уменьшаем ширину поля поиска */
+        margin-top: 10px;
+    }
+
+    /* Фиксированное меню */
+    .navcont {
+        padding: 15px 0; /* Уменьшаем отступы в меню */
+    }
+    #search{
+        width: 40%;
+    }
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#search {
+    padding: 10px 200px 10px 15px; /* Сдвигаем текст вправо, чтобы место для иконки было */
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px; /* Размещаем иконку в правом углу */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+}
+
+

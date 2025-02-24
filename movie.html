@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки по русской литературе</title>
+    <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Уроки по русской литературе</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Подключение стилей -->
+    </head>
+    <body>
+    
+        <!-- Навигационное меню -->
+        <nav class="navcont">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="poets.html">Поэты</a></li>
+                <li><a href="lesson.html">Видео Уроки</a></li>
+                <li><a href="#about.html">О сайте</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Заголовок -->
+        <header>
+            <h1>Уроки по русской литературе</h1>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Поиск по фильмам ..." onkeyup="searchLessons()">
+                <i class="fa fa-search">🔎</i> <!-- Иконка лупы -->
+            </div>
+        </header>
+    
+        <!-- Раздел с уроками -->
+        <section id="lessons">
+            <div class="lesson" data-title="Анализ романа Преступление и наказание">
+                <h2>Анализ романа «Преступление и наказание»</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g8cP2rwPnDQ" frameborder="0" allowfullscreen></iframe>
+                <p>Разбор основных идей романа...</p>
+            </div>
+            <div class="lesson" data-title="Преступление и наказание">
+                <h2>Анализ романа «Преступление и наказание»</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g8cP2rwPnDQ" frameborder="0" allowfullscreen></iframe>
+                <p>Разбор основных идей романа...</p>
+            </div>
+            <div class="lesson" data-title="Образ Онегина в романе Пушкина">
+                <h2>Образ Онегина в романе Пушкина</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yz6wW3ap-k4" frameborder="0" allowfullscreen></iframe>
+                <p>Описание героя, его характер...</p>
+            </div>
+        </section>
+    
+    </body>
+    </html>
+    
+
+    <script>
+        function searchLessons() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let lessons = document.getElementsByClassName('lesson');
+
+            for (let lesson of lessons) {
+                let title = lesson.getAttribute('data-title').toLowerCase();
+                lesson.style.display = title.includes(input) ? "block" : "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

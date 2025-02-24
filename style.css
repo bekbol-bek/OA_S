@@ -1,0 +1,204 @@
+body {
+   
+    
+
+    font-family: Arial, sans-serif;
+    background: url('img/Любовь\ Цитата\ Рабочий\ стол\ Обои.png') no-repeat center center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+
+}
+
+ body::before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(3px);  /* Добавляем размытие */
+    z-index: -1; /* Ставим изображение на задний план */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);  
+} 
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-image {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+    margin-bottom: 5px;
+}
+
+/* Стили для навигационного меню */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.674); /* Тёмный фон с прозрачностью */
+    padding: 5px 20px;
+    /* backdrop-filter: blur(5px); Размытие фона */
+   
+}
+
+
+
+
+
+/* Меню - список */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Ссылки в меню */
+.nav-links li {
+    display: inline;
+    font-size: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Эффект при наведении */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffcc00;
+}
+
+.poets-container {
+    display: flex;
+    flex-direction: column; /* Размещаем в столбец */
+    /* align-items: center; Центрируем по горизонтали */
+    gap: 30px; /* Расстояние между изображениями */
+    padding: 20px;
+    margin-left: 0;
+    margin-right: auto; /* Прижмёт к левому краю */
+}
+
+.poets-container div {
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.poets-container img {
+    width: 400px; /* Размер изображений */
+    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.poets-container img:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); /* Эффект свечения */
+}
+
+/* Анимация плавного появления */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex; /* Делаем строку */
+    align-items: center; /* Выравниваем по вертикали */
+    gap: 100px; /* Отступ между текстом и картинкой */
+}
+
+.container img {
+    width: 400px; /* Размер картинки */
+    height: auto;
+    border-radius: 20px;
+}
+
+.text-box {
+    max-width: 400px; /* Ширина текста */
+    color: #ffffff;
+}
+
+.text-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+.text-box p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    /* Навигационное меню */
+    .navbar {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        font-size: 35px; /* Уменьшаем размер логотипа на мобильных */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Меню в колонку */
+        align-items: center;
+    }
+
+    .nav-links li {
+        font-size: 20px;
+    }
+
+    .poets-container {
+        padding: 10px;
+    }
+
+    .poets-container img {
+        width: 80%; /* Уменьшаем размеры изображений */
+        height: auto;
+    }
+
+    /* Контейнер с изображением и текстом */
+    .container {
+        flex-direction: column; /* Столбик для мобильной версии */
+        gap: 30px;
+    }
+
+    .container img {
+        width: 100%; /* Изображение на весь экран */
+    }
+
+    .text-box h2 {
+        font-size: 30px; /* Меньший размер заголовка */
+    }
+
+    .text-box p {
+        font-size: 18px; /* Меньше текст */
+    }
+}
+
+
+
+
